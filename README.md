@@ -4,7 +4,7 @@
 
 Fullstack Dev is a Codex plugin for Chinese-language web development, API debugging, code review, repository audits, and technical debt tracking.
 
-[桌面端图文安装](#在-codex-desktop-安装) · [终端安装](#在终端安装) · [使用示例](#使用示例) · [常见问题](#常见问题)
+[Codex Desktop 第三方插件安装教程](https://16bd.github.io/fullstack-dev-marketplace/) · [桌面端图文安装](#在-codex-desktop-安装) · [终端安装](#在终端安装) · [使用示例](#使用示例) · [常见问题](#常见问题)
 
 ## 在 Codex Desktop 安装
 
