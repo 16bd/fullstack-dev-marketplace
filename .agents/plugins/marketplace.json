@@ -1,0 +1,20 @@
+{
+  "name": "fullstack-dev-marketplace",
+  "interface": {
+    "displayName": "Fullstack Dev"
+  },
+  "plugins": [
+    {
+      "name": "fullstack-dev",
+      "source": {
+        "source": "local",
+        "path": "./plugins/fullstack-dev"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
