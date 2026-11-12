@@ -1,6 +1,10 @@
 # Fullstack Dev
 
-用于前端、后端、联调和脚本开发，也支持代码审查、仓库审计和技术债盘点。
+**Fullstack Dev 是一个面向中文开发团队的 Codex 全栈开发插件**，适用于 Web 前端、后端 API、前后端联调、通用脚本、代码审查和仓库审计。它沿现有代码和调用链定位问题，优先复用项目已有实现，并从页面、API 或脚本入口验证实际行为。
+
+Fullstack Dev is a Codex plugin for Chinese-language web development, API debugging, code review, repository audits, and technical debt tracking.
+
+[桌面端图文安装](#在-codex-desktop-安装) · [终端安装](#在终端安装) · [使用示例](#使用示例) · [常见问题](#常见问题)
 
 ## 在 Codex Desktop 安装
 
@@ -40,6 +44,33 @@ https://github.com/16bd/fullstack-dev-marketplace.git
 codex plugin marketplace add https://github.com/16bd/fullstack-dev-marketplace.git
 codex plugin add fullstack-dev@fullstack-dev-marketplace
 ```
+
+安装后打开一个新对话，即可试用下面的提示词。
+
+## 使用示例
+
+| 场景 | 可以直接输入的提示词 |
+| --- | --- |
+| 前端开发与验证 | 给订单列表加状态筛选，并验证分页和清空筛选的行为。 |
+| API 排查与前后端联调 | 排查订单 API 返回空列表的问题，核对前端传参、接口默认值和分页行为。 |
+| 数据库只读排查 | 排查某个订单为什么没出现在列表里。先说明查询范围，再用只读 SELECT 核对状态。 |
+| 通用脚本开发 | 修复 CSV 汇总脚本，用一份正常输入和一份缺列输入验证输出和退出码。 |
+| PR 和代码审查 | 审查当前 PR，按严重程度列出有代码证据的缺陷和回归风险。 |
+| 仓库审计与技术债盘点 | 审计结算模块的调用链，并列出带 `shortcut:` 注释的技术债和升级条件。 |
+
+## 常见问题
+
+### 安装后需要手动选择 Fullstack Dev 吗？
+
+可以直接描述需求，由 Codex 根据任务判断是否调用技能。要显式指定时，可以在输入框键入 `$`，搜索 `fullstack-dev` 并选择对应技能。
+
+### Fullstack Dev 会执行数据库变更吗？
+
+数据库排查只执行只读 `SELECT`，并在查询前说明目的和范围。涉及数据或表结构变更时，插件提供标明相关表和字段的 SQL，由你确认后自行执行。
+
+### 可以只做代码审查或仓库审计吗？
+
+可以。只要求审查、审计或技术债盘点时，插件会提交发现和代码证据，并保留工作区文件原样。具体流程可查看 [Fullstack Dev 技能说明](plugins/fullstack-dev/skills/fullstack-dev/SKILL.md)。
 
 ## 更新
 
