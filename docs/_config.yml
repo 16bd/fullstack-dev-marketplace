@@ -8,6 +8,13 @@ theme: jekyll-theme-primer
 plugins:
   - jekyll-sitemap
 
+# 验证文件继续对 Google 开放，站点地图只列出正文页面。
+defaults:
+  - scope:
+      path: google7851a0f43496fd1f.html
+    values:
+      sitemap: false
+
 # 教程通过首页读取，避免在 Pages 上发布第二个地址。
 exclude:
   - install-github-plugins-in-codex-desktop.md
